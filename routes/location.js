@@ -4,12 +4,14 @@ const Location = mongoose.model("Location");
 
 router.get("/get", async (req, res) => {
   const findData = await Location.find({
-    $near: {
-      $geometry: {
-        type: "Point",
-        coordinates: [req.body.long, req.body.lat],
+    geometry: {
+      $near: {
+        $geometry: {
+          type: "Point",
+          coordinates: [req.body.long, req.body.lat],
+        },
+        $maxDistance: 10000000000,
       },
-      $maxDistance: 10000000000,
     },
   }).then((respn) => res.send(respn));
 });
