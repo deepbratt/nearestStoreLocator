@@ -4,18 +4,23 @@ const Location = mongoose.model("Location");
 
 router.get("/get", async (req, res) => {
   const findData = await Location.find({
-    geometry: {
-      $near: {
-        $geometry: {
-          type: "Point",
-          coordinates: [req.body.lat, req.body.long],
-        },
-        $maxDistance: 100,
-        $minDistance: 10,
+    $near: {
+      $geometry: {
+        type: "Point",
+        coordinates: [req.body.long, req.body.lat],
       },
+      $maxDistance: 10000000000,
     },
-  });
-  res.send(findData);
+  }).then((respn) => res.send(respn));
+});
+
+router.post("/add", async (req, res) => {
+  const newLocation = new Location();
+  newLocation.geometry.coordinates = [req.body.long, req.body.lat];
+  newLocation.properties.name = req.body.name;
+  newLocation.properties.description = req.body.description;
+  newLocation.properties.type = req.body.type;
+  newLocation.save().then((respn) => res.send(respn));
 });
 
 module.exports = router;

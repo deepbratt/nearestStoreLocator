@@ -846,11 +846,6 @@ mongodb@3.6.0:
   optionalDependencies:
     saslprep "^1.0.0"
 
-mongoose-geojson-schema@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/mongoose-geojson-schema/-/mongoose-geojson-schema-2.1.5.tgz#91a267710bc070558d78cd855fbdeb2cc71578dc"
-  integrity sha512-xVq5zuhThL4Y5VyqXuAo0rYZmL+PGmUgp8yBiz8GXs/MDyUWSb6sKTG9+61BQD6RSjTmJXaILYeebbNjHU6zdw==
-
 mongoose-legacy-pluralize@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/mongoose-legacy-pluralize/-/mongoose-legacy-pluralize-1.0.2.tgz#3ba9f91fa507b5186d399fb40854bff18fb563e4"
@@ -869,7 +864,7 @@ mongoose-unique-validator@^2.0.3:
     lodash.foreach "^4.1.0"
     lodash.get "^4.0.2"
 
-mongoose@^5.9.25:
+mongoose@^5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.10.0.tgz#05a35f5a3d8485613c9988aeb9548285a97083f7"
   integrity sha512-5itAvBMVDG4+zTDtuLg/IyoTxEMgvpOSHnigQ9Cyh8LR4BEgMAChJj7JSaGkg+tr1AjCSY9DgSdU8bHqCOoxXg==
